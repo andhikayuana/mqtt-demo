@@ -12,12 +12,16 @@ Simple Chat using EMQTT, You can see slide [here](http://slides.com/andhikayuana
 
 ### Setup MQTT Broker using EMQTT
 1. Download here [emqtt.io](http://emqtt.io/downloads) and choose for your OS.
-2. See installation at (here)[http://emqtt.io/docs/v2/install.html]
+2. See installation at [here](http://emqtt.io/docs/v2/install.html)
 3. To start your broker please following instructions in the docs
 4. The Dashboard helps check running status of the broker, monitor statistics and metrics of MQTT packets, query clients, sessions, topics and subscriptions.
+
+    | Default | Value |
+    |--|--|
     | Default Address | http://localhost:18083 |
     | Default User | admin |
     | Default Password | public |
+    
 5. You can testing at the dashboard in websocket menu
 
 ### Android
