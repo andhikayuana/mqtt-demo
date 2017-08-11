@@ -1,4 +1,4 @@
-# MQTT DEMO & Android Client
+# Simple Chat using EMQTT
 
 Simple Chat using EMQTT, You can see slide [here](http://slides.com/andhikayuana/intro-rtc)
 
@@ -10,11 +10,24 @@ Simple Chat using EMQTT, You can see slide [here](http://slides.com/andhikayuana
 
 ## Installation
 
-todo
+### Setup MQTT Broker using EMQTT
+1. Download here [emqtt.io](http://emqtt.io/downloads) and choose for your OS.
+2. See installation at (here)[http://emqtt.io/docs/v2/install.html]
+3. To start your broker please following instructions in the docs
+4. The Dashboard helps check running status of the broker, monitor statistics and metrics of MQTT packets, query clients, sessions, topics and subscriptions.
+    | Default Address | http://localhost:18083 |
+    | Default User | admin |
+    | Default Password | public |
+5. You can testing at the dashboard in websocket menu
 
-## Usage
+### Android
+1. clone this repo and build the application
+2. Please adjust with your environmen
+3. Enjoy!
 
-TODO: Write usage instructions
+## Contact
+
+You can contact me at the emaill or [fb](https://www.facebook.com/yuana.andhika)
 
 ## Contributing
 
@@ -23,15 +36,3 @@ TODO: Write usage instructions
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-
-## History
-
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
-
-## License
-
-TODO: Write license
