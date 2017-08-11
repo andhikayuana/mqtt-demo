@@ -1,10 +1,16 @@
 # MQTT DEMO & Android Client
 
-TODO: Write a project description
+Simple Chat using EMQTT, You can see slide [here](http://slides.com/andhikayuana/intro-rtc)
+
+## Requirements
+
+1. [EMQTT](http://emqtt.io/)
+2. [Android Studio + SDK](https://developer.android.com/studio/index.html?hl=id)
+3. [Paho MQTT Client](https://github.com/eclipse/paho.mqtt.android)
 
 ## Installation
 
-TODO: Describe the installation process
+todo
 
 ## Usage
 
