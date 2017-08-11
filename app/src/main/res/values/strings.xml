@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MQTT Chat Demo</string>
+    <string name="txt_topic">topic</string>
+    <string name="txt_go">Go</string>
+    <string name="txt_base_url">base url</string>
+    <string name="txt_client_id">client id</string>
+    <string name="txt_write_message">Write a message</string>
+    <string name="txt_cant_empty">Cannot empty</string>
+    <string name="txt_subscribe">Subscribe</string>
+</resources>
