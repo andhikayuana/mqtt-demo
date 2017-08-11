@@ -1,7 +1,6 @@
 package io.github.andhikayuana.mqttdemo.ui.chat;
 
 import android.content.Context;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.andhikayuana.mqttdemo.R;
-import io.github.andhikayuana.mqttdemo.util.Const;
-import io.github.andhikayuana.mqttdemo.util.SharedPref;
 
 /**
  * @author yuana <andhikayuana@gmail.com>
@@ -76,10 +73,9 @@ public class ChatAdapter extends BaseAdapter {
         }
 
         public void bind(Chat item) {
-            // FIXME: 8/12/17
             tvItemChatMessage.setText(item.getMessage());
-            tvItemChatMessage.setGravity(item.getClientId().equals(SharedPref.getString(Const.KEY.CLIENT_ID)) ?
-                    Gravity.RIGHT : Gravity.LEFT);
+//            tvItemChatMessage.setGravity(item.getClientId().equals(SharedPref.getString(Const.KEY.CLIENT_ID)) ?
+//                    Gravity.RIGHT : Gravity.LEFT);
         }
     }
 }
