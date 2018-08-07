@@ -1,5 +1,8 @@
 package io.github.andhikayuana.mqttdemo.ui.chat;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +53,26 @@ public class Chat implements Serializable {
         return chats;
     }
 
+    public static Chat parseMessage(byte[] payload) {
+        String s = new String(payload);
+
+        try {
+            JSONObject jsonObject = new JSONObject(s);
+
+            Chat chat = new Chat();
+            chat.setId(jsonObject.getInt("id"));
+            chat.setMessage(jsonObject.getString("message"));
+            chat.setClientId(jsonObject.getString("client_id"));
+
+            return chat;
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return new Chat();
+    }
+
     public int getId() {
         return id;
     }
@@ -88,5 +111,13 @@ public class Chat implements Serializable {
     @Override
     public int hashCode() {
         return clientId != null ? clientId.hashCode() : 0;
+    }
+
+    public JSONObject buildMessage(String msg) throws JSONException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id", id)
+                .put("client_id", clientId)
+                .put("message", msg);
+        return jsonObject;
     }
 }

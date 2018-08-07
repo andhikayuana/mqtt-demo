@@ -15,8 +15,10 @@ import android.widget.Toast;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
+import org.json.JSONException;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Random;
 
 import io.github.andhikayuana.mqttdemo.R;
 import io.github.andhikayuana.mqttdemo.receiver.MessageReceiver;
@@ -129,9 +131,14 @@ public class ChatActivity extends AppCompatActivity implements MessageReceiver.M
     private void sendMessage() {
 
         Chat chat = new Chat();
-        chat.setId(1);
+        chat.setId(new Random().nextInt());
         chat.setClientId(clientId);
-        chat.setMessage(etInputMessage.getText().toString());
+        try {
+            chat.setMessage(chat.buildMessage(etInputMessage.getText().toString()).toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            chat.setMessage(etInputMessage.getText().toString());
+        }
 
         etInputMessage.setText(null);
 

@@ -59,11 +59,7 @@ public class MqttMessageService extends Service {
             @Override
             public void messageArrived(String topic, MqttMessage message) throws Exception {
 
-                Chat chat = new Chat();
-                chat.setClientId(mqttAndroidClient.getClientId());
-                chat.setMessage(new String(message.getPayload()));
-
-                handleMessage(chat);
+                handleMessage(Chat.parseMessage(message.getPayload()));
             }
 
             @Override
